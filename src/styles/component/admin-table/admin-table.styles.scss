@@ -1,0 +1,31 @@
+@import '../../general/palette';
+
+.admin-table {
+  box-shadow: 0px 5px 20px -10px rgba(0, 0, 0, 0.5);
+  th {
+    background-color: $table-column-bgd !important;
+    font-weight: normal !important;
+  }
+  .social-network-column {
+    display: flex;
+    align-items: center;
+    .anticon {
+      margin-right: 0.5rem;
+    }
+  }
+  .status-selection {
+    border-radius: 1rem;
+    padding: 0.25rem 1rem;
+    color: $white;
+  }
+
+  .border-approved {
+    border-left: 0.75rem solid $approved-color;
+  }
+  .border-declined {
+    border-left: 0.75rem solid $declined-color;
+  }
+  .border-pending {
+    border-left: 0.75rem solid $pending-color;
+  }
+}

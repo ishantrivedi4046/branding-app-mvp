@@ -1,0 +1,39 @@
+@import '../general/palette';
+
+.admin-layout {
+  &_sidebar {
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 8rem !important;
+    max-width: 8rem !important ;
+    min-width: 8rem !important;
+    background: $sidebar-background;
+    .sidebar-content {
+      display: flex;
+      height: 100%;
+      align-items: center;
+      justify-content: center;
+      span {
+        font-size: 4rem;
+        font-weight: 700;
+        rotate: -90deg;
+      }
+    }
+  }
+  .admin-container {
+    margin-left: 8rem;
+    &_header {
+      background: $white;
+      border-bottom: 1px solid $border-color;
+      padding: 0;
+    }
+
+    &_content {
+      height: fit-content;
+      background: $white;
+    }
+  }
+}
