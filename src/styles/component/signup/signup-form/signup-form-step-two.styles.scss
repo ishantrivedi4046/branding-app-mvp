@@ -1,0 +1,161 @@
+@import '../../../general/palette';
+
+.signup-form-step-2 {
+  padding: 5rem;
+  margin-top: 1.25rem;
+  border-radius: 1.25rem;
+  background-color: $signup-step-two-bgd;
+
+  .text {
+    margin-left: 7.25rem;
+    font-size: 0.75rem;
+  }
+  .input-row {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    column-gap: 5rem;
+    span {
+      font-size: 0.75rem;
+    }
+    ::placeholder {
+      color: $black;
+      opacity: 1;
+    }
+    .ant-input {
+      font-size: 1.5rem;
+      border-width: 0;
+      border-bottom: 0.125rem solid $black !important;
+      border-color: $black;
+      outline: 2px solid transparent !important;
+      outline-offset: 2px !important;
+      background-color: inherit;
+      color: $black;
+    }
+  }
+  .fillup-row {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    column-gap: 5rem;
+    font-size: 0.75rem;
+    &-content {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      .ant-input {
+        width: 20%;
+        border: 0;
+        color: $border-color-dark;
+        background-color: inherit;
+        border-bottom: 0.125rem solid $black;
+        box-shadow: none;
+        font-size: 1.5rem;
+        padding: 0 2rem;
+        margin: 0 1rem;
+        &::placeholder {
+          color: $border-color-dark;
+        }
+      }
+    }
+  }
+  .button-row {
+    display: flex;
+    margin-top: 4rem;
+    column-gap: 5rem;
+    align-items: baseline;
+    .lable {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+    }
+    &-content {
+      display: flex;
+      align-items: baseline;
+      width: 100%;
+      &-text {
+        font-size: 1.5rem;
+        max-width: 28%;
+      }
+      &-options {
+        width: 80%;
+        font-size: 1rem;
+        margin-left: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        .ant-input {
+          font-size: 1rem;
+          border: 0;
+          color: $black;
+          background-color: inherit;
+          border-radius: 2rem;
+          border-color: $black;
+          border: 1px solid;
+          box-shadow: none;
+          width: 12%;
+          padding: 0.5rem 1rem;
+          margin: 0.25rem;
+          &::placeholder {
+            color: $black;
+            opacity: 1;
+          }
+        }
+
+        .ant-btn,
+        .ant-btn:hover,
+        .ant-btn:focus,
+        .ant-btn:active {
+          background-color: inherit;
+          border-radius: 2rem;
+          border-color: $black;
+          border: 1px solid;
+          margin: 0.25rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 1.25rem;
+          color: inherit;
+        }
+        .ant-btn[disabled],
+        .ant-btn[disabled]:hover,
+        .ant-btn[disabled]:focus,
+        .ant-btn[disabled]:active {
+          @extend .ant-btn;
+        }
+      }
+    }
+  }
+  .textarea-row {
+    display: flex;
+    align-items: baseline;
+    margin-top: 4rem;
+    column-gap: 5rem;
+    .lable {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+    }
+    &-content {
+      flex-grow: 1;
+      font-size: 1.5rem;
+      &-text {
+        margin-bottom: 1rem;
+      }
+      textarea {
+        width: 100%;
+        padding: 0.5rem;
+        font-size: 1.5rem;
+        background-color: inherit;
+        border: 0.02rem solid $black;
+        outline: none;
+      }
+    }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px $signup-step-two-bgd inset !important;
+    -webkit-box-shadow: 0 0 0 30px $signup-step-two-bgd inset !important;
+  }
+}

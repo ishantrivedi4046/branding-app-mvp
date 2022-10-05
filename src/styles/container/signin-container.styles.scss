@@ -1,0 +1,75 @@
+@import '../general//palette';
+
+.signin-container {
+  &-form {
+    padding: 0 12rem;
+    &-title {
+      margin-top: 10rem;
+      border-radius: 1.25rem;
+      padding: 6rem 0;
+      width: 100%;
+      background-color: $signup-step-bgd;
+      text-align: center;
+      font-size: 3.25rem;
+      font-weight: bolder;
+    }
+    &-content {
+      padding: 5rem;
+      margin-top: 1.25rem;
+      width: 100%;
+      border-radius: 1.25rem;
+      background-color: $signup-step-one-bgd;
+      &-text {
+        margin-left: 7.25rem;
+        font-size: 0.75rem;
+      }
+      &-input-row {
+        display: flex;
+        align-items: center;
+        margin-top: 4rem;
+        column-gap: 5rem;
+        span {
+          font-size: 0.75rem;
+        }
+        ::placeholder {
+          color: $black;
+          opacity: 1;
+        }
+        .ant-input {
+          font-size: 1.5rem;
+          border: 0;
+          border-bottom: 0.125rem solid $black !important;
+          border-color: $black;
+          outline: 2px solid transparent !important;
+          outline-offset: 2px !important;
+          background-color: transparent;
+          color: $black;
+        }
+      }
+    }
+    .button-container {
+      width: 100%;
+      text-align: end;
+      .submit-button {
+        margin-top: 1.5rem;
+        border-radius: 1.24rem;
+        font-size: 1.25rem;
+        border-color: $black;
+        color: $black;
+        padding-bottom: 2.25rem;
+        &:active,
+        &:hover {
+          color: $black !important;
+        }
+      }
+    }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px $signup-step-one-bgd inset !important;
+    -webkit-box-shadow: 0 0 0 30px $signup-step-one-bgd inset !important;
+  }
+}

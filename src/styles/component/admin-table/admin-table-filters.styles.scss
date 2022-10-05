@@ -5,7 +5,7 @@
   color: $white;
   border-radius: 5px 5px 0 0;
   padding: 1rem;
-  .header {
+  &__header {
     .title {
       font-size: 1.5rem;
     }
@@ -32,10 +32,12 @@
     .filters-container {
       width: 95%;
       display: flex;
+      flex-wrap: wrap;
       align-items: center;
       .filter {
-        width: 14rem;
+        width: 20rem;
         margin-right: 2rem;
+        margin-bottom: 1rem;
         .title {
           padding-bottom: 0.5rem;
           border-bottom: 1px solid;
@@ -58,6 +60,9 @@
     .clear-all {
       span {
         cursor: pointer;
+      }
+      .ant-btn-text {
+        color: $white;
       }
     }
   }

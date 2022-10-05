@@ -1,12 +1,25 @@
-.header-container {
+@import '../general/_palette';
+
+.header {
   display: flex;
+  position: fixed;
+  z-index: 10;
+  top: 0;
   width: 100%;
-  padding: 0 2rem;
+  padding: 2rem;
   align-items: center;
   justify-content: space-between;
+  a {
+    color: $black;
+  }
   .title {
     .text {
-      font-size: 1rem;
+      font-size: 3rem;
+      font-weight: 700;
     }
+  }
+  &-route {
+    display: flex;
+    column-gap: 1rem;
   }
 }

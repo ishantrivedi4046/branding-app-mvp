@@ -1,0 +1,13 @@
+@import '../../../general/palette';
+
+.step {
+  padding: 1rem 4rem;
+  font-size: small;
+  font-weight: 400;
+  border-bottom: 0.125rem solid $border-color-dark;
+}
+.active-step {
+  border-bottom: 0.18rem solid $black;
+}
+
+// px-12 py-4 border-b-2 text-xs font-semibold

@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import ENV_CONFIG from 'constant/env.config';
 import Axios, {
   AxiosRequestConfig,

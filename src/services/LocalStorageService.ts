@@ -1,5 +1,5 @@
 export const AUTH_TOKEN = 'auth_token';
-
+export const AUTH_TOKEN_EAT = 'auth_token_eat';
 export class LocalStorageService {
   private static _instance: LocalStorageService;
 
@@ -59,6 +59,12 @@ export class LocalStorageService {
 
   removeAuthToken(): void {
     this.removeLocalStorageValue(AUTH_TOKEN);
+  }
+
+  isTokenExpired() {
+    const eat = parseInt(localStorage.getItem(AUTH_TOKEN_EAT) ?? '', 10);
+    const timeStamp = Math.floor(Date.now() / 1000);
+    return Number.isNaN(eat) ? true : timeStamp > eat;
   }
 }
 

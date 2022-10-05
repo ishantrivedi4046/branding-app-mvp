@@ -1,0 +1,68 @@
+@import '../../../general/palette';
+
+.signup-form {
+  padding: 5rem;
+  margin-top: 1.25rem;
+  border-radius: 1.25rem;
+  background-color: $signup-step-one-bgd;
+
+  &-text {
+    margin-left: 7.25rem;
+    font-size: 0.75rem;
+  }
+  &-input-row {
+    display: flex;
+    align-items: center;
+    margin-top: 4rem;
+    column-gap: 5rem;
+    span {
+      font-size: 0.75rem;
+    }
+    ::placeholder {
+      color: $black;
+      opacity: 1;
+    }
+    input {
+      font-size: 1.5rem;
+      border-width: 0;
+      border-bottom: 0.125rem solid $black !important;
+      border-color: $black;
+      outline: 2px solid transparent !important;
+      outline-offset: 2px !important;
+      background-color: transparent;
+      color: $black;
+    }
+  }
+  &-button-row {
+    display: flex;
+    margin-top: 4rem;
+    align-items: baseline;
+    column-gap: 5rem;
+    .lable {
+      margin-top: 1rem;
+      font-size: 0.75rem;
+    }
+    &-content {
+      display: flex;
+      align-items: baseline;
+      .text {
+        font-size: 1.5rem;
+      }
+      .options {
+        margin-left: 1rem;
+        display: flex;
+        font-size: 1rem;
+        align-items: baseline;
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    box-shadow: 0 0 0 30px $signup-step-one-bgd inset !important;
+    -webkit-box-shadow: 0 0 0 30px $signup-step-one-bgd inset !important;
+  }
+}

@@ -1,0 +1,62 @@
+@import '../../../general/palette';
+
+.signup-form-step-3 {
+  padding: 5rem;
+  margin-top: 1.25rem;
+  border-radius: 1.5rem;
+  background-color: $signup-step-three-bgd;
+  .text-row {
+    display: flex;
+    column-gap: 5rem;
+    align-items: center;
+    .lable {
+      font-size: 0.75rem;
+    }
+    .title {
+      font-size: 1.5rem;
+    }
+  }
+  .drag-upload-container {
+    height: 18rem;
+    margin: 2rem 2rem 0rem 6.5rem;
+    border: 2px solid;
+    .ant-upload-drag {
+      background-color: inherit;
+    }
+    .ant-upload-drag-container {
+      .message {
+        height: 40%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 2rem;
+        .sub-message {
+          font-size: small;
+          font-weight: 500;
+        }
+      }
+      .upload-container {
+        height: 60%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .upload-button {
+          border: 1px solid $black;
+          padding: 0.5rem 1.5rem;
+          border-radius: 2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .anticon {
+            color: $text-color;
+          }
+          &-text {
+            color: $text-color;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

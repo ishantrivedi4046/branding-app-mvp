@@ -1,16 +1,25 @@
-import { Button } from 'antd';
-import React from 'react';
+import React, { FC, memo } from 'react';
+import { BasicOptionTypes } from 'types/components/admin-table/AdminTable.type';
 import '../styles/component/header.styles.scss';
 
-const HeaderContent: React.FC = () => (
-  <div className='header-container'>
+interface HeaderProps {
+  className?: string;
+  routes: Array<BasicOptionTypes<string>>;
+}
+
+const Header: FC<HeaderProps> = ({ className, routes }) => (
+  <div className={`header ${className}`}>
     <div className='title'>
-      <span className='text'>Dashboard</span>
+      <span className='text'>KIT</span>
     </div>
-    <div className='extras'>
-      <Button>LOGOUT</Button>
+    <div className='header-route'>
+      {routes.map((route) => (
+        <div className='extras' key={route?.value}>
+          <a href={route?.value}>{route?.label}</a>
+        </div>
+      ))}
     </div>
   </div>
 );
 
-export default HeaderContent;
+export default memo(Header);

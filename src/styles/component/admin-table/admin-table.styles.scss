@@ -9,14 +9,20 @@
   .social-network-column {
     display: flex;
     align-items: center;
-    .anticon {
-      margin-right: 0.5rem;
+    .followers {
+      margin-left: 0.5rem;
     }
   }
   .status-selection {
     border-radius: 1rem;
     padding: 0.25rem 1rem;
     color: $white;
+    cursor: pointer;
+  }
+  .ant-table-expanded-row {
+    .ant-table-cell {
+      padding: 0;
+    }
   }
 
   .border-approved {
@@ -27,5 +33,14 @@
   }
   .border-pending {
     border-left: 0.75rem solid $pending-color;
+  }
+}
+
+.custom-pagination {
+  .ant-pagination-item {
+    border-radius: 100%;
+  }
+  .pagination-next {
+    margin-left: 0.5rem;
   }
 }

@@ -1,0 +1,27 @@
+@import '../general//palette';
+
+.signup-container {
+  &-forms {
+    padding: 0 12rem;
+    padding-bottom: 8rem;
+    margin-top: 10rem;
+  }
+  &-buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+    column-gap: 1rem;
+    .signup-container-button {
+      margin-top: 1.5rem;
+      border-radius: 1.24rem;
+      font-size: 1.25rem;
+      border-color: $black;
+      color: $black;
+      padding-bottom: 2.25rem;
+      &:active,
+      &:hover {
+        color: $black !important;
+      }
+    }
+  }
+}

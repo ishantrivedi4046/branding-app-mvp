@@ -1,9 +1,9 @@
-import { BasicOptionTypes } from 'types/components/admin-table/adminTable.type';
+import { BasicOptionTypes } from 'types/components/admin-table/AdminTable.type';
 
 export enum StatusOptionKeys {
-  APPROVED = 'approved',
-  DECLINED = 'declined',
-  PENDING = 'pending',
+  APPROVED = 'Approved',
+  DECLINED = 'Declined',
+  PENDING = 'Pending',
 }
 
 export const STATUS_OPTIONS: Array<BasicOptionTypes<StatusOptionKeys>> = [

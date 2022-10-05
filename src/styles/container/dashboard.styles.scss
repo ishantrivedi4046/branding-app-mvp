@@ -1,0 +1,36 @@
+@import '../general/_palette';
+
+.dashboard-container {
+  .dashboard-image {
+    padding: 10rem 2rem 2rem 2rem;
+    margin-bottom: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .image-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      height: 36rem;
+      width: 70%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1.5rem;
+        object-position: 50% 0%;
+      }
+      .home_button {
+        margin-top: 1.5rem;
+        border-radius: 1.24rem;
+        font-size: 1.25rem;
+        border-color: $black;
+        padding-bottom: 2.25rem;
+        &:active,
+        &:hover {
+          color: $black !important;
+        }
+      }
+    }
+  }
+}

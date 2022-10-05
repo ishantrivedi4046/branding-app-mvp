@@ -12,9 +12,8 @@ export const authLoginAction = (payload: AuthLoginActionPayloadType) => ({
   payload,
 });
 
-export const authLoginCompletedAction = (user: User) => ({
+export const authLoginCompletedAction = () => ({
   type: AuthActionType.LOGIN_COMPLETED,
-  payload: user,
 });
 
 export const authLoginErrorAction = (message: string) => ({
@@ -23,6 +22,9 @@ export const authLoginErrorAction = (message: string) => ({
 });
 
 export const authFetchMeAction = () => ({ type: AuthActionType.FETCH_ME });
+export const authLoginClearAction = () => ({
+  type: AuthActionType.LOGIN_CLEAR,
+});
 
 export const authFetchMeCompletedAction = (user: User) => ({
   type: AuthActionType.FETCH_ME_COMPLETED,
@@ -32,4 +34,8 @@ export const authFetchMeCompletedAction = (user: User) => ({
 export const authFetchMeErrorAction = (message: string) => ({
   type: AuthActionType.FETCH_ME_ERROR,
   payload: message,
+});
+
+export const authLogoutAction = () => ({
+  type: AuthActionType.LOGOUT,
 });

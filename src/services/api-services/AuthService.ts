@@ -6,11 +6,10 @@ class AuthService {
     return new AuthService();
   }
 
-  async login(data: {
-    email: string;
-    password: string;
-  }): Promise<{ user: User; token: string }> {
-    return baseApiService.post('/login', data, { extras: { useAuth: false } });
+  async login(data: { email: string; password: string }): Promise<User> {
+    return baseApiService.post('/accounts/authenticate', data, {
+      extras: { useAuth: false },
+    });
   }
 
   async fetchMe(): Promise<{ user: User }> {

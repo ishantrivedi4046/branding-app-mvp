@@ -1,7 +1,11 @@
 import { Entity } from '../entity';
 
 export interface User extends Entity {
-  first_name: string;
-  last_name?: string;
   email: string;
+  firstName: string;
+  id: string;
+  isVerified: boolean;
+  jwtToken: string;
+  lastName: string;
+  role: string;
 }

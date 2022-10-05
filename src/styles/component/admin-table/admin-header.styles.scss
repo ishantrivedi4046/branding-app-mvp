@@ -1,0 +1,27 @@
+@import '../../general/_palette.scss';
+
+.header-container {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  width: 100%;
+  padding: 0 2rem;
+  align-items: center;
+  justify-content: space-between;
+  .title {
+    .text {
+      font-size: 1rem;
+    }
+  }
+  .route {
+    .extras {
+      a {
+        border: 1px solid;
+        color: $black;
+        padding: 0.25rem 0.75rem;
+        border-radius: 0.35rem;
+        font-size: 0.75rem;
+      }
+    }
+  }
+}

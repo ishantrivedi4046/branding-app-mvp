@@ -1,0 +1,55 @@
+@import '../general/palette';
+
+.dashboard-footer {
+  background: $sidebar-background;
+  padding-top: 6rem;
+  &-content {
+    width: 42%;
+    margin-left: 2rem;
+    &-label {
+      font-size: 4rem;
+      line-height: 3.5rem;
+      font-weight: bolder;
+      color: $black;
+    }
+    &-input {
+      position: relative;
+      margin-top: 2rem;
+      margin-right: 8rem;
+      input {
+        border: 0;
+        border-radius: 0;
+        border-bottom: 0.125rem solid $black !important;
+        background-color: inherit;
+        color: $black;
+        &::placeholder {
+          color: $black;
+        }
+      }
+      span {
+        position: absolute;
+        right: 0;
+        top: 0.2rem;
+        font-size: 1.2rem;
+      }
+    }
+    &-link {
+      margin-top: 8rem;
+      a {
+        margin-left: 1rem;
+        color: $black;
+        font-weight: 600;
+      }
+    }
+  }
+  &-text {
+    overflow: hidden;
+    margin-top: 1.5rem;
+    line-height: 85vh;
+    font-size: 68.75vw;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

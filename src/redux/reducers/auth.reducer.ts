@@ -1,9 +1,14 @@
 import produce from 'immer';
 import { Reducer } from 'redux';
 import { AuthActionType } from 'redux/actions/actions.constants';
+import {
+  AUTH_TOKEN_EAT,
+  localStorageService,
+} from 'services/LocalStorageService';
 
 export interface AuthState {
   userID?: number;
+  userLoggedIn?: boolean;
   loading?: boolean;
   error?: string;
 }
@@ -23,6 +28,8 @@ export const authReducer: Reducer<AuthState> = (
         break;
       }
       case AuthActionType.LOGIN_COMPLETED:
+        draft.userLoggedIn = true;
+        break;
       case AuthActionType.FETCH_ME_COMPLETED: {
         draft.userID = action.payload.id;
         draft.loading = false;
@@ -33,6 +40,16 @@ export const authReducer: Reducer<AuthState> = (
       case AuthActionType.FETCH_ME_ERROR: {
         draft.loading = false;
         draft.error = action.payload;
+        break;
+      }
+      case AuthActionType.LOGIN_CLEAR:
+        draft.error = undefined;
+        draft.loading = false;
+        break;
+      case AuthActionType.LOGOUT: {
+        localStorageService.removeAuthToken();
+        localStorageService.removeLocalStorageValue(AUTH_TOKEN_EAT);
+        draft.userLoggedIn = false;
         break;
       }
       default:

@@ -11,4 +11,9 @@ body {
   #root {
     height: 100vh;
   }
+
+  .ant-input {
+    box-shadow: none !important;
+    border: 0;
+  }
 }

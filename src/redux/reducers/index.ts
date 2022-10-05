@@ -1,10 +1,14 @@
 import { combineReducers } from 'redux';
 import { authReducer } from './auth.reducer';
+import formReducer from './form/form.reducer';
+import influencerReducer from './influencer/influencer.reducer';
 import { userReducer } from './user.reducer';
 
 const appReducer = combineReducers({
   auth: authReducer,
   user: userReducer,
+  form: formReducer,
+  influencer: influencerReducer,
 });
 
 export const rootReducer = (state: any, action: any) =>
