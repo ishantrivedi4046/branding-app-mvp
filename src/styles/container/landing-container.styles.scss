@@ -2,10 +2,7 @@
 
 .landing-container {
   &-header {
-    color: $white;
-    a {
-      color: $white;
-    }
+    width: 100vw !important;
   }
   &-content {
     &-image {
@@ -61,20 +58,351 @@
     }
     &-qna {
       background-color: $signup-step-bgd;
-      padding: 6rem 2rem;
-      &-lable {
-        font-size: 0.75rem;
-        font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &-section-4 {
+      height: 59.375rem;
+      background-color: $signup-step-bgd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .brand-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 75%;
+        .brand-text {
+          height: 100%;
+          width: 34%;
+          padding-left: 3rem;
+          .title {
+            font-weight: 1000;
+            text-transform: uppercase;
+            font-size: 3.35rem;
+            line-height: 3rem;
+            letter-spacing: -0.05rem;
+          }
+          .description {
+            margin-top: 2rem;
+            font-size: 1rem;
+            line-height: 1.538rem;
+          }
+        }
+        .brand-content {
+          height: 100%;
+          width: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          padding-right: 2rem;
+          .images-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            .brand-card-1 {
+              width: 13rem;
+              background-color: $signup-step-one-bgd;
+              border-radius: 0.625rem;
+              height: 10.35rem;
+              margin: 0 1rem 1rem 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            .brand-women {
+              margin-right: 1rem;
+            }
+          }
+          .gif-container {
+            .gif {
+              width: 14.8rem;
+              height: 22.8rem;
+              border-radius: 0.625rem;
+            }
+            .brand-card-2 {
+              width: 16.725rem;
+              background-color: $home-page-red-color;
+              border-radius: 0.625rem;
+              height: 11.5rem;
+              margin-top: 1rem;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
       }
-      &-title {
-        width: 66%;
-        color: $text-color;
-        margin-top: 3rem;
+    }
+    &-section-5 {
+      height: 59.375rem;
+      background-color: $home-page-section-5-bdg;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .expression-container {
+        width: 75%;
+        height: 85%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .col-1 {
+          height: 100%;
+          display: flex;
+          align-items: baseline;
+          position: relative;
+          width: 56%;
+          .expression-card {
+            height: 12.06rem;
+            width: 8.3rem;
+            position: absolute;
+            border-radius: 0.625rem;
+            z-index: 1;
+            right: 0;
+            top: 12rem;
+            background-color: $signup-step-bgd;
+          }
+        }
+        .col-2 {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          .title {
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 1000;
+            line-height: 2.813rem;
+            text-transform: uppercase;
+          }
+          .description {
+            text-align: center;
+            font-size: 1.25rem;
+            line-height: 1.538rem;
+            margin-top: 1.5rem;
+            padding: 0 4rem;
+          }
+        }
+        .col-3 {
+          height: 100%;
+          display: flex;
+          align-items: end;
+          .gif {
+            height: 24.5rem;
+            width: 17rem;
+            border-radius: 0.625rem;
+          }
+        }
+      }
+    }
+    &-section-6 {
+      height: 59.375rem;
+      background-color: $signup-step-one-bgd;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .micro-influencer-container {
+        width: 80%;
+        height: 75%;
+        display: flex;
+        margin-top: 11rem;
+        align-items: center;
+        justify-content: center;
+        .image-container {
+          position: relative;
+          height: 100%;
+          width: 38%;
+          img {
+            position: absolute;
+            width: 20.3rem;
+            height: 24.375rem;
+            border-radius: 0.625rem;
+            object-fit: cover;
+          }
+          .image2 {
+            left: 4rem;
+            top: 5rem;
+          }
+          .gif {
+            left: 7rem;
+            top: 8rem;
+          }
+        }
+        .influencer-text-container {
+          height: 100%;
+          display: flex;
+          width: 40%;
+          margin-bottom: 12rem;
+          flex-direction: column;
+          justify-content: center;
+          .title {
+            font-size: 3rem;
+            text-transform: uppercase;
+            line-height: 3rem;
+            font-weight: 1000;
+          }
+          .description {
+            margin-top: 2rem;
+            line-height: 1.5rem;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+    &-section-7 {
+      height: 66rem;
+      padding-top: 6rem;
+      .community-title {
+        text-align: center;
         font-size: 3rem;
-        line-height: 2.5rem;
-        font-weight: 800;
-        .highlighted-text {
-          color: $black;
+        text-transform: uppercase;
+        font-weight: 1000;
+        line-height: 3rem;
+      }
+
+      .image-rows-container {
+        margin-top: 6rem;
+        .ant-carousel {
+          .slick-slide {
+            width: fit-content !important;
+            margin: 0.5rem;
+          }
+        }
+        .image-container {
+          img {
+            height: 21.229rem;
+            width: 17.755rem;
+            border-radius: 0.625rem;
+          }
+        }
+      }
+    }
+    &-section-3 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-bottom: 8rem;
+      .title {
+        font-weight: 1000;
+        font-size: 3rem;
+        padding: 4rem 0rem;
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .working-container {
+        display: flex;
+      }
+    }
+    &-section-8 {
+      height: 59rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .comment-section {
+        width: 62%;
+        display: flex;
+        position: relative;
+        align-items: center;
+        margin-left: 2rem;
+        .comment {
+          width: 53rem;
+          padding: 3rem 2rem 1rem 2rem;
+          background: $signup-step-one-bgd;
+          border-radius: 1rem;
+          height: 21rem;
+          z-index: 10;
+          position: absolute;
+          right: 0;
+          .text {
+            font-weight: 1000;
+            font-size: 2.188rem;
+            line-height: 2.438rem;
+            text-align: center;
+            vertical-align: top;
+            letter-spacing: -0.07rem;
+            text-transform: uppercase;
+          }
+          .commentor-name {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 2rem;
+            .name {
+              font-size: 1.25rem;
+            }
+            .designation {
+            }
+          }
+        }
+      }
+    }
+    &-section-9 {
+      background-color: $signup-landing-page-color;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 59rem;
+      justify-content: center;
+      .signup-button {
+        margin-top: 3rem;
+        background: transparent;
+        border-radius: 1.75rem;
+        font-size: 2rem;
+        border-color: #000;
+        height: auto;
+        padding: 0.125rem 1.5rem;
+        color: #000;
+        &:active,
+        &:hover {
+          color: $black !important;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1350px) and (max-width: 1500px) {
+  .landing-container {
+    &-content {
+      &-section-4 {
+        .brand-container {
+          width: 90%;
+          .brand-text {
+            .title {
+              font-size: 2.5rem;
+              line-height: 2.5rem;
+            }
+          }
+        }
+      }
+      &-section-5 {
+        .expression-container {
+          width: 90%;
+          .col-1 {
+            width: 75%;
+          }
+        }
+      }
+      &-section-6 {
+        .micro-influencer-container {
+          width: 100%;
+        }
+      }
+      &-section-7 {
+        .image-rows-container {
+          .ant-carousel {
+            .slick-track {
+              height: 10rem;
+            }
+          }
+        }
+      }
+      &-section-8 {
+        .comment-section {
+          width: 84%;
         }
       }
     }

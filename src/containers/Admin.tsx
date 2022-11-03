@@ -31,7 +31,7 @@ const Admin: React.FC<AdminProps> = () => {
     <Layout hasSider className='admin-layout'>
       <Sider className='admin-layout_sidebar'>
         <div className='sidebar-content'>
-          <span>KIT</span>
+          <span>RUME</span>
         </div>
       </Sider>
       <Layout className='admin-container'>

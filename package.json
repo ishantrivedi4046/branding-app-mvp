@@ -1,5 +1,5 @@
 {
-  "name": "kit-frontend",
+  "name": "rume-frontend",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",

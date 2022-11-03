@@ -45,10 +45,11 @@
   &-text {
     overflow: hidden;
     margin-top: 1.5rem;
-    line-height: 85vh;
-    font-size: 68.75vw;
+    line-height: 56vh;
+    font-size: 36.75vw;
     font-weight: bolder;
     display: flex;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
   }

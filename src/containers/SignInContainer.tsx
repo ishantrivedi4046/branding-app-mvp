@@ -89,7 +89,7 @@ const SignInContainer = () => {
       <Header routes={DASHBOARD_HEADER_ROUTE_LIST} />
       <div className='signin-container-form'>
         <div className='signin-container-form-title'>
-          <span>SIGN IN TO KIT</span>
+          <span>SIGN IN TO RUME</span>
         </div>
         <div className='signin-container-form-content'>
           <div className='signin-container-form-content-text'>

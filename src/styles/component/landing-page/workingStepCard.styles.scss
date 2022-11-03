@@ -1,0 +1,36 @@
+.working-step-card {
+  width: 33.25rem;
+  border-radius: 0.8rem;
+  margin: 0 1rem 1rem 0;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .icon {
+      height: 3rem;
+    }
+    .count {
+      font-size: 5rem;
+      font-weight: 1000;
+      line-height: 5.188rem;
+      letter-spacing: -0.25rem;
+    }
+  }
+  &__body {
+    .step-name {
+      text-transform: uppercase;
+      font-weight: 1000;
+      font-size: 3.125rem;
+      letter-spacing: -0.025rem;
+    }
+    .step-description {
+      font-size: 1.25rem;
+      margin-top: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+}

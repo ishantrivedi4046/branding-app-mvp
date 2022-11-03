@@ -9,7 +9,7 @@ interface SignupStepComponentProps {
 
 const SignupStepComponent: FC<SignupStepComponentProps> = ({ step }) => (
   <div className='signup-step '>
-    <div className='signup-step-text'>SIGN UP TO KIT TODAY</div>
+    <div className='signup-step-text'>SIGN UP TO RUME TODAY</div>
     <div className='signup-step-content'>
       <Step key={SignupSteps.STEP_1} step={step === SignupSteps.STEP_1}>
         STEP 01

@@ -10,7 +10,7 @@ interface HeaderProps {
 const Header: FC<HeaderProps> = ({ className, routes }) => (
   <div className={`header ${className}`}>
     <div className='title'>
-      <span className='text'>KIT</span>
+      <img src='images/rume_logo.svg' alt='logo' className='rume-logo' />
     </div>
     <div className='header-route'>
       {routes.map((route) => (

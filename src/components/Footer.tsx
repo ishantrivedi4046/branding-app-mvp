@@ -26,12 +26,12 @@ const FooterComponent: React.FC = () => {
           </span>
         </div>
         <div className='dashboard-footer-content-link'>
-          <a href='_'>INSTAGRAM</a>
-          <a href='_'>FACEBOOK</a>
-          <a href='_'>LINKEDIN</a>
+          <a href='/home'>INSTAGRAM</a>
+          <a href='/home'>FACEBOOK</a>
+          <a href='/home'>LINKEDIN</a>
         </div>
       </div>
-      <div className='dashboard-footer-text'>KIT</div>
+      <div className='dashboard-footer-text'>RUME</div>
     </div>
   );
 };
