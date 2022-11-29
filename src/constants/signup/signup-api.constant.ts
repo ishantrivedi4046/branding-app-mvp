@@ -18,6 +18,7 @@ export enum InfluencerProfileApiKeys {
   TERMS = 'terms',
   LOCATION = 'location',
   MOBILE = 'mobile',
+  DATE_OF_BIRTH = 'dateofbirth',
 }
 
 export const INFLUENCER_PROFILE_API_KEYS_ARRAY: Array<InfluencerProfileApiKeys> =
@@ -33,4 +34,5 @@ export const INFLUENCER_PROFILE_API_KEYS_ARRAY: Array<InfluencerProfileApiKeys> 
     InfluencerProfileApiKeys.TIKTOK_FOLLOWERS,
     InfluencerProfileApiKeys.WEBSITE,
     InfluencerProfileApiKeys.TERMS,
+    InfluencerProfileApiKeys.DATE_OF_BIRTH,
   ];

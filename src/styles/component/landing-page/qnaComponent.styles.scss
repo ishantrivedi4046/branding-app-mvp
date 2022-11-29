@@ -1,0 +1,46 @@
+@import '../../general/palette';
+$delay: 0;
+$duration: 800ms;
+$iterations: 1;
+
+.qna-container {
+  font-weight: 950;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3.125rem;
+  line-height: 3.35rem;
+  letter-spacing: -0.02rem;
+  padding: 8.5rem;
+  color: $black;
+
+  .peel-text-1 {
+    background: #3ca2f3;
+  }
+  .peel-text-2 {
+    background: #c4ff78;
+  }
+}
+
+.peel-in-animation {
+  span {
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-duration: 800ms;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    position: relative;
+    animation-name: clip-text;
+    white-space: nowrap;
+    cursor: default;
+  }
+}
+
+@keyframes clip-text {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}

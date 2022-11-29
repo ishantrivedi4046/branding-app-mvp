@@ -7,10 +7,10 @@ export const FormContext = React.createContext<{
     key: string,
     defaultValue: any
   ) => string | Array<string> | FormValueType;
-  setIntoForm: (key: string, value: string | Array<string>) => void;
+  setIntoForm: (key: string, value: string | Array<string> | number) => void;
 }>({
   getFromForm: (key: string, defaultValue: any) => defaultValue,
-  setIntoForm: (key: string, value: string | Array<string>) => {
+  setIntoForm: (key: string, value: string | Array<string> | number) => {
     console.log(key, value);
   },
 });

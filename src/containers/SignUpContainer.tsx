@@ -55,7 +55,7 @@ const SignUpContainer: FC = () => {
   );
 
   const updateSignupForm = useCallback(
-    (key: string, value: string | string[]) => {
+    (key: string, value: string | string[] | number) => {
       if (
         INFLUENCER_PROFILE_API_KEYS_ARRAY.includes(
           key as InfluencerProfileApiKeys

@@ -8,10 +8,12 @@
   justify-content: space-between;
   &__header {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: space-between;
+    height: 50%;
     .icon {
       height: 3rem;
+      visibility: hidden;
     }
     .count {
       font-size: 5rem;
@@ -25,12 +27,36 @@
       text-transform: uppercase;
       font-weight: 1000;
       font-size: 3.125rem;
+      visibility: hidden;
       letter-spacing: -0.025rem;
     }
     .step-description {
       font-size: 1.25rem;
       margin-top: 1rem;
+      visibility: hidden;
       line-height: 1.5rem;
     }
+  }
+}
+
+.reveal-card-content {
+  .icon,
+  .step-name,
+  .step-description {
+    transform: translate(0px, 0%);
+    transition: opacity ease;
+    visibility: visible !important;
+    animation: reveal_card 1s ease;
+  }
+}
+
+@keyframes reveal_card {
+  0% {
+    opacity: 0;
+    transform: translateY(110%);
+    transition: opacity 0ms ease;
+  }
+  25% {
+    opacity: 0;
   }
 }

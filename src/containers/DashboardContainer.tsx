@@ -16,7 +16,7 @@ const DashboardContainer: React.FC = () => {
       <Header routes={DASHBOARD_HEADER_ROUTE_LIST} />
       <div className='dashboard-image'>
         <div className='image-container'>
-          <img src='public/images/successfulSubmission.png' alt='success-img' />
+          <img src='images/successfullsubmission.svg' alt='success-img' />
           <Button className='home_button' onClick={handleGoToHome}>
             Go Back To Home
           </Button>

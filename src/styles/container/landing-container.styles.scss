@@ -6,54 +6,21 @@
   }
   &-content {
     &-image {
+      height: 64rem;
       position: relative;
-      .top-images {
-        .image-1 {
-          position: absolute;
-          top: 24%;
-          z-index: 1;
-        }
-        .image-2 {
-          position: absolute;
-          top: 10%;
-          z-index: 4;
-        }
-        .image-3 {
-          position: absolute;
-          top: 42%;
-          z-index: 2;
-        }
-        .image-4 {
-          position: absolute;
-          top: 32%;
-          z-index: 3;
+      background-color: $signup-step-bgd;
+      .image-container {
+        height: 64rem;
+        .below-image {
+          width: 100vw;
+          height: 100%;
+          object-fit: cover;
         }
       }
-      img {
-        width: 100%;
-      }
-      &-text {
-        color: $white;
+      .top-image {
         position: absolute;
-        left: 2rem;
-        bottom: 6rem;
-        right: 2rem;
-        .lable {
-          display: flex;
-          column-gap: 1rem;
-          border-bottom: 0.125rem solid $white;
-          margin-right: 1rem;
-          font-size: 0.75rem;
-          padding: 0.25rem 0;
-        }
-        .title {
-          display: flex;
-          flex-direction: column;
-          margin-top: 2rem;
-          font-size: 3rem;
-          line-height: 2.5rem;
-          font-weight: 800;
-        }
+        top: 25%;
+        left: 22.5%;
       }
     }
     &-qna {
@@ -81,12 +48,14 @@
             font-weight: 1000;
             text-transform: uppercase;
             font-size: 3.35rem;
+            visibility: hidden;
             line-height: 3rem;
             letter-spacing: -0.05rem;
           }
           .description {
             margin-top: 2rem;
             font-size: 1rem;
+            visibility: hidden;
             line-height: 1.538rem;
           }
         }
@@ -120,6 +89,7 @@
               width: 14.8rem;
               height: 22.8rem;
               border-radius: 0.625rem;
+              object-fit: fill;
             }
             .brand-card-2 {
               width: 16.725rem;
@@ -175,6 +145,7 @@
             font-size: 3rem;
             font-weight: 1000;
             line-height: 2.813rem;
+            visibility: hidden;
             text-transform: uppercase;
           }
           .description {
@@ -182,6 +153,7 @@
             font-size: 1.25rem;
             line-height: 1.538rem;
             margin-top: 1.5rem;
+            visibility: hidden;
             padding: 0 4rem;
           }
         }
@@ -193,6 +165,7 @@
             height: 24.5rem;
             width: 17rem;
             border-radius: 0.625rem;
+            object-fit: fill;
           }
         }
       }
@@ -209,25 +182,42 @@
         display: flex;
         margin-top: 11rem;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         .image-container {
           position: relative;
-          height: 100%;
-          width: 38%;
-          img {
+          height: 55%;
+          width: 21.5%;
+          transform-style: preserve-3d;
+          margin-bottom: 10rem;
+          &::before {
+            content: '';
             position: absolute;
-            width: 20.3rem;
-            height: 24.375rem;
-            border-radius: 0.625rem;
-            object-fit: cover;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 1rem;
           }
-          .image2 {
-            left: 4rem;
-            top: 5rem;
-          }
-          .gif {
-            left: 7rem;
-            top: 8rem;
+          div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            overflow: hidden;
+            border-radius: 1rem;
+            animation: animate 3.5s ease-in-out infinite;
+            img {
+              position: absolute;
+              top: 0;
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
           }
         }
         .influencer-text-container {
@@ -240,12 +230,14 @@
           .title {
             font-size: 3rem;
             text-transform: uppercase;
+            visibility: hidden;
             line-height: 3rem;
             font-weight: 1000;
           }
           .description {
             margin-top: 2rem;
             line-height: 1.5rem;
+            visibility: hidden;
             font-size: 1rem;
           }
         }
@@ -260,6 +252,7 @@
         text-transform: uppercase;
         font-weight: 1000;
         line-height: 3rem;
+        visibility: hidden;
       }
 
       .image-rows-container {
@@ -289,6 +282,7 @@
         font-weight: 1000;
         font-size: 3rem;
         padding: 4rem 0rem;
+        visibility: hidden;
         text-align: center;
         text-transform: uppercase;
       }
@@ -324,6 +318,7 @@
             vertical-align: top;
             letter-spacing: -0.07rem;
             text-transform: uppercase;
+            visibility: hidden;
           }
           .commentor-name {
             display: flex;
@@ -332,8 +327,10 @@
             margin-top: 2rem;
             .name {
               font-size: 1.25rem;
+              visibility: hidden;
             }
             .designation {
+              visibility: hidden;
             }
           }
         }
@@ -346,14 +343,14 @@
       align-items: center;
       height: 59rem;
       justify-content: center;
-      .signup-button {
+      .h-button {
         margin-top: 3rem;
         background: transparent;
-        border-radius: 1.75rem;
         font-size: 2rem;
         border-color: #000;
         height: auto;
-        padding: 0.125rem 1.5rem;
+        padding: 0.5rem 1.5rem;
+        width: auto;
         color: #000;
         &:active,
         &:hover {
@@ -361,6 +358,62 @@
         }
       }
     }
+    .wrap {
+      transform-style: preserve-3d;
+      transform: perspective(100rem);
+      cursor: pointer;
+    }
+    .container {
+      --rX: 0;
+      --rY: 0;
+      --bX: 50%;
+      --bY: 80%;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      transform: rotateX(calc(var(--rX) * 1deg)) rotateY(calc(var(--rY) * 1deg));
+      background-position: var(--bX) var(--bY);
+      transition: transform 0.6s 1s;
+    }
+
+    .container--active {
+      transition: none;
+    }
+  }
+}
+
+.reveal-text {
+  div {
+    visibility: visible !important;
+    animation: reveal_text 1s ease;
+    transition: opacity ease;
+  }
+}
+
+@keyframes reveal_text {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+    transition: opacity 0ms ease;
+  }
+  25% {
+    opacity: 0;
+  }
+}
+
+@keyframes animate {
+  0% {
+    transform: perspective(500px) translate3d(0, 0, 0);
+    opacity: 1;
+  }
+  25% {
+    transform: perspective(500px) translate3d(50px, 50px, 50px);
+    opacity: 1;
+  }
+  35%,
+  100% {
+    transform: perspective(500px) translate3d(50px, 50px, 100px);
+    opacity: 0;
   }
 }
 

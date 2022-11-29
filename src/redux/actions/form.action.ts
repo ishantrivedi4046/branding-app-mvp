@@ -1,7 +1,4 @@
-import {
-  FormAction,
-  FormValueType,
-} from 'types/reducer/form/form.reducer.types';
+import { FormAction } from 'types/reducer/form/form.reducer.types';
 import { FormActionType } from './actions.constants';
 
 export const creatForm = (formId: string): FormAction => ({
@@ -11,7 +8,7 @@ export const creatForm = (formId: string): FormAction => ({
 
 export const updateForm = (
   formId: string,
-  payload: { [x: string]: string | Array<string> | FormValueType }
+  payload: { [x: string]: any }
 ): FormAction => ({
   type: FormActionType.UPDATE_FORM,
   form_id: formId,

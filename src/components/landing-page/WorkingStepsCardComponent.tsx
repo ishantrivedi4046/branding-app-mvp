@@ -1,8 +1,10 @@
+import withScrollObserver from 'hoc/withScrollObserver';
 import React from 'react';
 import '../../styles/component/landing-page/workingStepCard.styles.scss';
 
 interface WorkingStepsCardProps {
   stepCount: string;
+  id: string;
   iconPath: string;
   step: string;
   styles: { height: string; backgroundColor: string; marginTop?: string };
@@ -10,9 +12,14 @@ interface WorkingStepsCardProps {
 const WorkingStepsCardComponent: React.FC<WorkingStepsCardProps> = (
   props: WorkingStepsCardProps
 ) => {
-  const { step, stepCount, iconPath, styles } = props;
+  const { step, stepCount, iconPath, styles, id } = props;
   return (
-    <div className='working-step-card' key={stepCount} style={{ ...styles }}>
+    <div
+      className='working-step-card'
+      id={id}
+      key={stepCount}
+      style={{ ...styles }}
+    >
       <div className='working-step-card__header'>
         <img src={iconPath} alt='working-step-icon' className='icon' />
         <span className='count'>{stepCount}</span>
@@ -28,4 +35,6 @@ const WorkingStepsCardComponent: React.FC<WorkingStepsCardProps> = (
   );
 };
 
-export default WorkingStepsCardComponent;
+export default withScrollObserver<WorkingStepsCardProps>(
+  WorkingStepsCardComponent
+);

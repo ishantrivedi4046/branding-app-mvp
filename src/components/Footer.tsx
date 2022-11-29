@@ -1,19 +1,42 @@
 import { ArrowRightOutlined } from '@ant-design/icons';
 import { Input } from 'antd';
-import React, { useState } from 'react';
+import withScrollObserver from 'hoc/withScrollObserver';
+import React, { useCallback, useState } from 'react';
 import '../styles/component/footer.styles.scss';
 
-const FooterComponent: React.FC = () => {
+interface FooterComponentProps {
+  animateText?: boolean;
+}
+const FooterComponent: React.FC<FooterComponentProps> = ({ animateText }) => {
   const [email, setEmail] = useState<string>('');
   const handleInputChange = (e: any) => {
     setEmail(e.target.value);
   };
+  const renderAnimatedText = useCallback(
+    (component: any, id: string) => {
+      if (animateText) {
+        const Component = withScrollObserver(() => component);
+        return <Component observerClass={id} animationClass='reveal-text' />;
+      }
+      return component;
+    },
+    [animateText]
+  );
   return (
     <div className='dashboard-footer'>
       <div className='dashboard-footer-content'>
-        <div className='dashboard-footer-content-label'>
-          SUBSCRIBE TO OUR MAILING LIST TO STAY IN TOUCH WITH THE LATEST
-        </div>
+        {renderAnimatedText(
+          <div id='dashboard-footer-content-label'>
+            <div
+              className='dashboard-footer-content-label'
+              style={{ visibility: animateText ? 'hidden' : 'visible' }}
+            >
+              SUBSCRIBE TO OUR MAILING LIST TO STAY IN TOUCH WITH THE LATEST
+            </div>
+          </div>,
+          'dashboard-footer-content-label'
+        )}
+
         <div className='dashboard-footer-content-input'>
           <Input
             value={email}
