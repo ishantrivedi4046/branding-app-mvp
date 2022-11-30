@@ -420,6 +420,11 @@
 @media (min-width: 1350px) and (max-width: 1500px) {
   .landing-container {
     &-content {
+      &-image {
+        .top-image {
+          left: 13.5%;
+        }
+      }
       &-section-4 {
         .brand-container {
           width: 90%;
