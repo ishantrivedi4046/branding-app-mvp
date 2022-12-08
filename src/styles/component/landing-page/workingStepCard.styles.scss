@@ -60,3 +60,28 @@
     opacity: 0;
   }
 }
+
+@media (min-width: 350px) and (max-width: 600px) {
+  .working-step-card {
+    width: 21.25rem;
+    height: 20rem !important;
+    margin: 1rem 0rem;
+    padding: 1.5rem;
+    &__header {
+      .icon {
+        height: 2rem;
+      }
+      .count {
+        font-size: 4rem;
+      }
+    }
+    &__body {
+      .step-name {
+        font-size: 2rem;
+      }
+      .step-description {
+        font-size: 0.95rem;
+      }
+    }
+  }
+}

@@ -79,10 +79,18 @@ const LandingContainer: React.FC = () => {
                 observerClass='connect'
                 animationClass='reveal-card-content'
               />
-              <img src='images/section3-image-c1.svg' alt='group' />
+              <img
+                src='images/section3-image-c1.svg'
+                alt='group'
+                className='img-1-section-3'
+              />
             </Col>
             <Col>
-              <img src='images/section3-image-c2.svg' alt='group' />
+              <img
+                src='images/section3-image-c2.svg'
+                alt='group'
+                className='img-2-section-3'
+              />
               <WorkingStepsCardComponent
                 step='Create'
                 stepCount='03'

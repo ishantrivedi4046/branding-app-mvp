@@ -92,6 +92,7 @@
           border-color: $black;
           border: 1px solid;
           box-shadow: none;
+          text-align: center;
           width: 12%;
           padding: 0.5rem 1rem;
           margin: 0.25rem;
@@ -126,6 +127,7 @@
     }
   }
   .textarea-row {
+    position: relative;
     display: flex;
     align-items: baseline;
     margin-top: 4rem;
@@ -157,5 +159,82 @@
   input:-webkit-autofill:active {
     box-shadow: 0 0 0 30px $signup-step-two-bgd inset !important;
     -webkit-box-shadow: 0 0 0 30px $signup-step-two-bgd inset !important;
+  }
+}
+@media (min-width: 350px) and (max-width: 600px) {
+  .signup-form-step-2 {
+    position: relative;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    padding: 0 0.8rem;
+    max-width: 24.25rem;
+    .text {
+      padding-top: 2.703rem;
+      margin-left: 0;
+      font-size: 0.813rem;
+    }
+    .input-row {
+      margin-top: 3.125rem;
+      span {
+        position: absolute;
+        left: 1rem;
+      }
+      flex-direction: column;
+      .ant-input {
+        margin-top: 1.875rem;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+    }
+    .fillup-row {
+      flex-direction: column;
+      span {
+        width: 100%;
+      }
+      &-content {
+        font-size: 1rem;
+        font-weight: 400;
+        span {
+          width: auto;
+        }
+      }
+    }
+
+    .button-row {
+      flex-direction: column;
+
+      &-content {
+        flex-direction: column;
+        &-text {
+          width: 100%;
+          font-size: 1rem;
+          font-weight: 400;
+          max-width: 100%;
+          margin-top: 0.5rem;
+        }
+        &-options {
+          margin-left: 0;
+          font-size: 0.7rem;
+          width: 100%;
+          .ant-input {
+            width: 7.063rem;
+            font-size: 0.7rem;
+          }
+          .selected-tag {
+            width: 3.8rem;
+            height: 1.938rem;
+          }
+        }
+      }
+    }
+    .textarea-row {
+      flex-direction: column;
+      height: 24rem;
+      &-content {
+        font-size: 1rem;
+        font-weight: 400;
+        margin-bottom: 14.654rem;
+      }
+    }
   }
 }

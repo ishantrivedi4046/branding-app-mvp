@@ -34,3 +34,42 @@
     }
   }
 }
+
+@media (min-width: 350px) and (max-width: 600px) {
+  .dashboard-container {
+    .header {
+      .h-button {
+        width: 6rem;
+        padding: 0.25rem 0;
+      }
+    }
+    .dashboard-image {
+      padding: 10rem 0.5rem 0.5rem 1rem;
+      .image-container {
+        width: 95%;
+        height: 10rem;
+        .home_button {
+          font-size: 1rem;
+          padding-bottom: 1.75rem;
+        }
+      }
+    }
+    .dashboard-footer {
+      &-content {
+        width: auto;
+        margin-left: 1rem;
+        &-label {
+          font-size: 2rem;
+          line-height: 2rem;
+        }
+        &-input {
+          margin-right: 2rem;
+        }
+      }
+      &-text {
+        line-height: 12vh;
+        font-weight: 1000;
+      }
+    }
+  }
+}

@@ -9,5 +9,16 @@
 .active-step {
   border-bottom: 0.18rem solid $black;
 }
-
+@media (min-width: 350px) and (max-width: 600px) {
+  .step {
+    justify-content: center;
+    max-width: 6.831rem;
+    padding: 1rem;
+  }
+  .active-step {
+    display: flex;
+    justify-content: center;
+    width: 6.831rem;
+  }
+}
 // px-12 py-4 border-b-2 text-xs font-semibold

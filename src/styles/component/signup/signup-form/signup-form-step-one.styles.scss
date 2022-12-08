@@ -76,3 +76,66 @@
     -webkit-box-shadow: 0 0 0 30px $signup-step-one-bgd inset !important;
   }
 }
+
+@media (min-width: 350px) and (max-width: 600px) {
+  .signup-form {
+    position: relative;
+    padding: 0 1rem;
+
+    max-width: 24.25rem;
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+    &-text {
+      padding-top: 2.703rem;
+      margin-left: 0;
+      font-size: 0.813rem;
+    }
+    &-input-row {
+      flex-direction: column;
+      margin-top: 3.125rem;
+      span {
+        position: absolute;
+        left: 1rem;
+      }
+
+      input {
+        margin-top: 1.875rem;
+        font-size: 1.25rem;
+      }
+      .datepicker {
+        width: 100%;
+
+        span {
+          position: absolute;
+          left: 5rem;
+        }
+      }
+    }
+
+    &-button-row {
+      flex-direction: column;
+      &-content {
+        flex-direction: column;
+        .text {
+          width: 100%;
+          font-size: 1.25rem;
+          font-weight: 400;
+        }
+        .options {
+          font-size: 0.7rem;
+          margin-bottom: 3.673rem;
+          margin-left: 0;
+          padding-top: 0.5rem;
+          width: fit-content;
+          .non-selected-tag {
+            height: 1.938rem;
+          }
+          .selected-tag {
+            width: 4rem;
+            height: 1.938rem;
+          }
+        }
+      }
+    }
+  }
+}

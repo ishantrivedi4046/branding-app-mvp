@@ -25,3 +25,33 @@
     }
   }
 }
+
+@media (min-width: 350px) and (max-width: 600px) {
+  .signup-container {
+    display: flex;
+    justify-content: center;
+    .header {
+      .h-button {
+        width: 6rem;
+        padding: 0.25rem 0;
+      }
+    }
+
+    &-forms {
+      padding: 0;
+      width: 100%;
+    }
+    &-buttons-container {
+      margin-top: 0;
+      column-gap: 0;
+      padding-bottom: 2rem;
+      .signup-container-button {
+        margin-top: 1.25rem;
+        margin-right: 1.25rem;
+        width: 5rem;
+        font-size: 0.9rem;
+        padding: 0;
+      }
+    }
+  }
+}
